@@ -7,10 +7,10 @@ cask "secretx" do
   desc "Secrets dashboard in the menu bar, for cloud and self-hosted servers"
   homepage "https://github.com/TimMikeladze/homebrew-secretx"
 
-  depends_on arch: :arm64
-  depends_on macos: :big_sur
   # The app ships its own updater
   auto_updates true
+  depends_on arch: :arm64
+  depends_on :macos
 
   app "SecretX.app"
 
