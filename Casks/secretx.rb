@@ -19,7 +19,7 @@ cask "secretx" do
   auto_updates true
   depends_on arch: :arm64
   # Electrobun's bundle declares LSMinimumSystemVersion 14
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "SecretX.app"
 
