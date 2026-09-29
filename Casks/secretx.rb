@@ -1,6 +1,6 @@
 cask "secretx" do
-  version "0.1.0"
-  sha256 "ac3b4bb37766eb52f1ac5f68561b79408503ac733c02a32bcc1aecaf71de3870"
+  version "0.1.1"
+  sha256 "11d01adfd644418007acd2199647a01807fe66852b6c88b8c95b24279e2057c7"
 
   url "https://d7c7i2c00uccxa48.public.blob.vercel-storage.com/desktop/v#{version}/SecretX-#{version}-arm64.dmg"
   name "SecretX"
