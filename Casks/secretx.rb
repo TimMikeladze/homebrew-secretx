@@ -4,13 +4,13 @@ cask "secretx" do
 
   url "https://d7c7i2c00uccxa48.public.blob.vercel-storage.com/desktop/v#{version}/SecretX-#{version}-arm64.dmg"
   name "SecretX"
-  desc "SecretX dashboard in the menu bar, for cloud and self-hosted servers"
+  desc "Secrets dashboard in the menu bar, for cloud and self-hosted servers"
   homepage "https://github.com/TimMikeladze/homebrew-secretx"
 
+  depends_on arch: :arm64
+  depends_on macos: :big_sur
   # The app ships its own updater
   auto_updates true
-  depends_on macos: ">= :big_sur"
-  depends_on arch: :arm64
 
   app "SecretX.app"
 
