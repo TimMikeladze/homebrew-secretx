@@ -7,10 +7,19 @@ cask "secretx" do
   desc "Secrets dashboard in the menu bar, for cloud and self-hosted servers"
   homepage "https://github.com/TimMikeladze/homebrew-secretx"
 
+  # The in-app updater's manifest is the source of truth for the latest version
+  livecheck do
+    url "https://d7c7i2c00uccxa48.public.blob.vercel-storage.com/desktop/stable-macos-arm64-update.json"
+    strategy :json do |json|
+      json["version"]
+    end
+  end
+
   # The app ships its own updater
   auto_updates true
   depends_on arch: :arm64
-  depends_on :macos
+  # Electrobun's bundle declares LSMinimumSystemVersion 14
+  depends_on macos: ">= :sonoma"
 
   app "SecretX.app"
 
